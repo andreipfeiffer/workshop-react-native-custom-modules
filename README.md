@@ -27,4 +27,5 @@ This is an advanced workshop, that requires prior experience using React Native.
    3. Run the app in an simulator
 
 If everything goes well, you should see this screen:
-![Screenshot](/public/screenshot.png)
+
+<img src="/public/screenshot.png" width="300">
