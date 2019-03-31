@@ -1,37 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 
 import Instructions from "./Instructions";
 import Button from "./Button";
 
-export default class App extends Component {
-  state = { count: 0 };
-
+export default function App() {
   increment = () => {};
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Button
-          onPress={this.increment}
-          value={this.state.count}
-          color="dodgerblue"
-        >
-          JavaScript counter
-        </Button>
+  return (
+    <View style={styles.container}>
+      <Button onPress={increment} value={0} color="dodgerblue">
+        JavaScript counter
+      </Button>
 
-        <Instructions />
+      <Instructions />
 
-        <Button
-          onPress={this.increment}
-          value={this.state.count}
-          color="orange"
-        >
-          Native counter
-        </Button>
-      </View>
-    );
-  }
+      <Button onPress={increment} value={0} color="orange">
+        Native counter
+      </Button>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
