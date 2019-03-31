@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-const Button = props => {
+const Button = ({ value, children, ...props }) => {
   const color = props.color || "#000000";
   return (
-    <TouchableOpacity style={styles.wrapper} onPress={props.onPress}>
-      <Text style={[styles.button, { color }]}>{props.value}</Text>
-      <Text style={styles.text}>{props.children}</Text>
+    <TouchableOpacity style={styles.wrapper} {...props}>
+      <Text style={[styles.button, { color }]}>{value}</Text>
+      <Text style={styles.text}>{children}</Text>
     </TouchableOpacity>
   );
 };
