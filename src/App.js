@@ -5,17 +5,15 @@ import Instructions from "./Instructions";
 import Button from "./Button";
 
 export default function App() {
-  increment = () => {};
-
   return (
     <View style={styles.container}>
-      <Button onPress={increment} value={0} color="dodgerblue">
+      <Button onPress={() => {}} value={0} color="dodgerblue">
         JavaScript counter
       </Button>
 
       <Instructions />
 
-      <Button onPress={increment} value={0} color="orange">
+      <Button onPress={() => {}} value={0} color="orange">
         Native counter
       </Button>
     </View>
