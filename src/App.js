@@ -3,13 +3,17 @@ import {
   StyleSheet,
   View,
   NativeModules,
-  DeviceEventEmitter
+  DeviceEventEmitter,
+  NativeEventEmitter
 } from "react-native";
 
 import Instructions from "./Instructions";
 import Button from "./Button";
 
+console.log(NativeModules);
+
 const { Counter } = NativeModules;
+const CounterEvents = new NativeEventEmitter(Counter);
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -29,9 +33,11 @@ export default function App() {
     };
 
     DeviceEventEmitter.addListener("onChange", setNativeCounter);
+    CounterEvents.addListener("onChange", setNativeCounter);
 
     return function cleanup() {
       DeviceEventEmitter.removeListener("onChange", setNativeCounter);
+      CounterEvents.removeListener("onChange", setNativeCounter);
     };
   }, []);
 
