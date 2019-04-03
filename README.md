@@ -8,9 +8,7 @@ This is an advanced workshop, that requires prior experience using React Native.
 
 1. react-native-cli + watchman (follow [Getting Started](https://facebook.github.io/react-native/docs/getting-started) with __React Native CLI Quickstart__, NOT the Expo Guide)
 2. Android Studio 3+ and an AVD with API level 26+
-3. for Apple users, Xcode `10.1` is required (`10.2` won't work, see below)
-
-__IMPORTANT:__ Xcode `10.2` introduced some bugs for Swift Native Modules, so please [downgrade Xcode](https://medium.com/@tseboho/how-to-downgrade-xcode-4359df5158d5) to version `10.1` to be able to follow this workshop. Thank you for your understanding.
+3. for Apple users, Xcode `10.x`
 
 ## Setup
 
