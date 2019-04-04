@@ -4,10 +4,12 @@ This workshop will walk you through the process of creating a Custom Module from
 
 ## Prerequisites
 
-This is an advanced workshop, that requires prior experience using React Native. The following tools are required to follow this workshop:
+This is an advanced workshop, that requires prior experience using React Native, as we won't cover the basics of React or React Native.
+
+The following tools are required to follow this workshop:
 
 1. react-native-cli + watchman (follow [Getting Started](https://facebook.github.io/react-native/docs/getting-started) with __React Native CLI Quickstart__, NOT the Expo Guide)
-2. Android Studio 3+ and an AVD with API level 26+
+2. Android Studio `3+` and an AVD with API level `26+`
 3. for Apple users, Xcode `10.x`
 
 ## Setup
@@ -28,6 +30,6 @@ This is an advanced workshop, that requires prior experience using React Native.
    2. Open `./ios/RNCustomModules.xcodeproj` in Xcode
    3. Run the app in a simulator
 
-If everything goes well, you should see this screen:
+If everything goes well, you should see the following screen, which doesn't do anything:
 
-<img src="/public/screenshot.png" width="300">
+<img src="/public/screenshot.png" width="250">
