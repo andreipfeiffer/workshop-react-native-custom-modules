@@ -16,16 +16,17 @@ The following tools are required to follow this workshop:
 
 1. Fork this repository
 2. Clone it locally
-3. Install dependencies: `npm install`
-4. Run the packager: `npm start`
+3. Go to your project folder: `cd workshop-react-native-custom-modules`
+4. Install dependencies: `npm install`
+5. Run the packager: `npm start`
 
-5. Start the project on Android:
+6. Start the project on Android:
    1. Open Android Studio
    2. Open the `./android` project in Android Studio
    3. Start an AVD
    4. Run the app
 
-6. Start the project on iOS:
+7. Start the project on iOS:
    1. Open Xcode
    2. Open `./ios/RNCustomModules.xcodeproj` in Xcode
    3. Run the app in a simulator
