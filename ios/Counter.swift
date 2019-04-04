@@ -16,7 +16,6 @@ class Counter: RCTEventEmitter {
   @objc
   func increment() {
     count += 1
-    print(count)
     sendEvent(withName: "onChange", body: count)
   }
   
@@ -31,7 +30,6 @@ class Counter: RCTEventEmitter {
   @objc
   func setCount(_ value: NSNumber) {
     count = Int(truncating: value)
-    print(count)
     sendEvent(withName: "onChange", body: count)
   }
   
