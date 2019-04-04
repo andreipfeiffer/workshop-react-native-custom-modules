@@ -28,16 +28,12 @@ export default function App() {
   };
 
   useEffect(() => {
-    const setNativeCounter = value => {
-      setNativeCount(value);
-    };
-
-    DeviceEventEmitter.addListener("onChange", setNativeCounter);
-    CounterEvents.addListener("onChange", setNativeCounter);
+    DeviceEventEmitter.addListener("onChange", setNativeCount);
+    CounterEvents.addListener("onChange", setNativeCount);
 
     return function cleanup() {
-      DeviceEventEmitter.removeListener("onChange", setNativeCounter);
-      CounterEvents.removeListener("onChange", setNativeCounter);
+      DeviceEventEmitter.removeListener("onChange", setNativeCount);
+      CounterEvents.removeListener("onChange", setNativeCount);
     };
   }, []);
 
