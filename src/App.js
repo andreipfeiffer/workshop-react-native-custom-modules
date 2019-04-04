@@ -4,7 +4,8 @@ import {
   View,
   NativeModules,
   DeviceEventEmitter,
-  NativeEventEmitter
+  NativeEventEmitter,
+  Platform
 } from "react-native";
 
 import Instructions from "./Instructions";
@@ -28,14 +29,14 @@ export default function App() {
   };
 
   useEffect(() => {
-    DeviceEventEmitter.addListener("onChange", setNativeCount);
-    CounterEvents.addListener("onChange", setNativeCount);
+    const emitter = Platform.OS === "ios" ? CounterEvents : DeviceEventEmitter;
+
+    emitter.addListener("onChange", setNativeCount);
 
     return function cleanup() {
-      DeviceEventEmitter.removeListener("onChange", setNativeCount);
-      CounterEvents.removeListener("onChange", setNativeCount);
+      emitter.removeListener("onChange", setNativeCount);
     };
-  }, []);
+  });
 
   return (
     <View style={styles.container}>
